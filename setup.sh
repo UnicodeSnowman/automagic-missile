@@ -1,7 +1,7 @@
 # clone and set up dotfiles
 #
 
-if [ ! -L ~/.dotfiles ]; then
+if [ ! -d ~/.dotfiles ]; then
     echo "Setting up dotfiles..."
     git clone https://github.com/UnicodeSnowman/dotfiles.git ~/.dotfiles
     ~/.dotfiles/setup.sh
@@ -9,7 +9,7 @@ else
     echo ".dotfiles directory exists!"
 fi
 
-if [ ! -L ~/.vim ]; then
+if [ ! -d ~/.vim ]; then
     echo "Setting up vim files..."
     git clone https://github.com/UnicodeSnowman/cap-vim.git ~/.vim
     ~/.vim/setup.sh
