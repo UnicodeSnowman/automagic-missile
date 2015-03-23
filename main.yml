@@ -16,6 +16,8 @@
       - iterm2
       - dropbox
       - 1password
+      - steam
+      - omnifocus
 
   tasks:
    - name: Install libs with Homebrew
