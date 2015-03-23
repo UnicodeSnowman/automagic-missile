@@ -1,5 +1,4 @@
 # clone and set up dotfiles
-#
 
 if [ ! -d ~/.dotfiles ]; then
     echo "Setting up dotfiles..."
@@ -21,9 +20,8 @@ fi
 if type brew; then
     echo "you gots brew"
     brew install ansible
-    # brew install git bash-completion - do this via ansible
-    # brew install tmux - do this via ansible
-    # brew install vim - do this via ansible
+    brew tap phinze/homebrew-cask
+    brew install brew-cask
 else
     echo "aint gots the brew, we can fix that..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
