@@ -25,5 +25,6 @@ if type brew; then
 else
     echo "aint gots the brew, we can fix that..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Homebrew installed. please run the setup script again"
 fi
 
