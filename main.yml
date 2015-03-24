@@ -1,10 +1,6 @@
 ---
 # sets up mah shit
 
-# TODO 
-# - source-code-pro font
-# - ssh keys?
-
 - hosts: all
   vars:
     applications:
@@ -43,3 +39,15 @@
      shell: brew cask install {{ item }}
      with_items: applications
      when: item not in installed_applications.results|map(attribute='stdout')
+
+   - name: Clone dotfiles
+     git: repo=git@github.com:UnicodeSnowman/dotfiles.git dest=~/.dotfiles
+
+   - name: Clone vimfiles
+     git: repo=git@github.com:UnicodeSnowman/cap-vim.git dest=~/.vim
+
+   - name: Set up dotifles
+     shell: ~/.dotfiles/setup.sh
+
+   - name: Set up vimfiles
+     shell: ~/.vim/setup.sh
