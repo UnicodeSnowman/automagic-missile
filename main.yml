@@ -14,6 +14,7 @@
       - 1password
       - steam
       - omnifocus
+      - evernote
 
   tasks:
    - name: Install libs with Homebrew
