@@ -15,6 +15,7 @@
       - steam
       - omnifocus
       - evernote
+      - boot2docker
 
   tasks:
    - name: Install libs with Homebrew
