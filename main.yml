@@ -30,6 +30,7 @@
        - mysql
        - postgres
        - node
+       - ctags
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
