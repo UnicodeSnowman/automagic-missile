@@ -31,6 +31,7 @@
        - postgres
        - node
        - ctags
+       - nginx
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
