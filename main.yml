@@ -32,6 +32,7 @@
        - node
        - ctags
        - nginx
+       - python3
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
