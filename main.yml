@@ -33,6 +33,7 @@
        - ctags
        - nginx
        - python3
+       - leiningen
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
