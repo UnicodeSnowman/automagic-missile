@@ -22,7 +22,6 @@
      homebrew: name={{ item }} state=present
      with_items:
        - wget
-       - vim
        - tmux
        - reattach-to-user-namespace # tmux config requires this
        - git
@@ -34,6 +33,9 @@
        - nginx
        - python3
        - leiningen
+       - rust
+       - the_silver_searcher
+       #- macvim # TODO need --override-system-vim flag
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
