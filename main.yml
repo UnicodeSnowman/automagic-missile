@@ -35,7 +35,7 @@
        - leiningen
        - rust
        - the_silver_searcher
-       #- macvim # TODO need --override-system-vim flag
+       - vim
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
