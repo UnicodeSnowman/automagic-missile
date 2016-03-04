@@ -11,11 +11,12 @@
       - slack
       - iterm2
       - dropbox
-      - 1password
       - steam
       - omnifocus
       - evernote
       - boot2docker
+      - virtualbox
+      - vagrant
 
   tasks:
    - name: Install libs with Homebrew
