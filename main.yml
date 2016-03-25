@@ -5,6 +5,7 @@
   vars:
     applications:
       - google-chrome
+      - firefox
       - postgres
       - spectacle
       - spotify
