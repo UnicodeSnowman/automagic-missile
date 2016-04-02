@@ -15,7 +15,6 @@
       - steam
       - omnifocus
       - evernote
-      - boot2docker
       - virtualbox
       - vagrant
 
@@ -38,6 +37,7 @@
        - rust
        - the_silver_searcher
        - vim
+       - weechat
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
