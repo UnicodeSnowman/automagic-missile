@@ -61,3 +61,6 @@
 
    - name: Set up vimfiles
      shell: ~/.vim/setup.sh
+
+   - name: Clean up brew detritus
+     shell: ./clean.sh
