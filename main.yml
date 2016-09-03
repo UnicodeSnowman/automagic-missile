@@ -37,7 +37,7 @@
        - rust
        - the_silver_searcher
        - vim
-       - weechat
+       - emacs
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
