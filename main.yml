@@ -4,40 +4,36 @@
 - hosts: all
   vars:
     applications:
-      - google-chrome
+      - dropbox
       - firefox
+      - google-chrome
+      - iterm2
+      - omnifocus
       - postgres
+      - slack
       - spectacle
       - spotify
-      - slack
-      - iterm2
-      - dropbox
       - steam
-      - omnifocus
-      - evernote
-      - virtualbox
-      - vagrant
 
   tasks:
    - name: Install libs with Homebrew
      homebrew: name={{ item }} state=present
      with_items:
-       - wget
-       - tmux
-       - reattach-to-user-namespace # tmux config requires this
-       - git
        - bash-completion
-       - mysql
-       - postgres
-       - node
-       - ctags
-       - nginx
-       - python3
+       - git
+       - golang
        - leiningen
-       - rust
+       - mysql
+       - neovim/neovim/neovim
+       - nginx
+       - node
+       - postgres
+       - python3
+       - reattach-to-user-namespace # tmux config requires this
        - the_silver_searcher
+       - tmux
        - vim
-       - emacs
+       - wget
 
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
