@@ -1,7 +1,7 @@
 ---
 # sets up mah shit
 
-- hosts: all
+- hosts: localhost
   vars:
     applications:
       - dropbox
@@ -23,7 +23,6 @@
        - git
        - golang
        - leiningen
-       - mysql
        - neovim/neovim/neovim
        - nginx
        - node
@@ -35,16 +34,16 @@
        - vim
        - wget
 
-   - name: Check for installed casks/apps
-     shell: brew cask list | grep {{ item }}
-     register: installed_applications
-     with_items: applications
-     ignore_errors: true
+     - name: Check for installed casks/apps
+       shell: brew cask list | grep {{ item }}
+       register: installed_applications
+       with_items: applications
+       ignore_errors: true
 
-   - name: Install apps with brew-cask
-     shell: brew cask install {{ item }}
-     with_items: applications
-     when: item not in installed_applications.results|map(attribute='stdout')
+     - name: Install apps with brew-cask
+       shell: brew cask install {{ item }}
+       with_items: applications
+       when: item not in installed_applications.results|map(attribute='stdout')
 
    - name: Clone dotfiles
      git: repo=git@github.com:UnicodeSnowman/dotfiles.git dest=~/.dotfiles
@@ -52,7 +51,7 @@
    - name: Clone vimfiles
      git: repo=git@github.com:UnicodeSnowman/cap-vim.git dest=~/.vim
 
-   - name: Set up dotifles
+   - name: Set up dotfiles
      shell: ~/.dotfiles/setup.sh
 
    - name: Set up vimfiles
