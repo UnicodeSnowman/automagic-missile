@@ -8,13 +8,12 @@
       - dropbox
       - firefox
       - google-chrome
-      - iterm2
+      #- iterm2 # TODO install beta version
       - omnifocus
       - postgres
       - slack
       - spectacle
       - spotify
-      - steam
 
   tasks:
    - name: Install libs with Homebrew
