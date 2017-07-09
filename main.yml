@@ -9,6 +9,7 @@
       - firefox
       - google-chrome
       - iterm2-beta # for Fira Code ligature support
+      - font-fira-code
       - omnifocus
       - postgres
       - slack
