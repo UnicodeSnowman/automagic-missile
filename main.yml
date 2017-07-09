@@ -8,7 +8,7 @@
       - dropbox
       - firefox
       - google-chrome
-      #- iterm2 # TODO install beta version
+      - iterm2-beta # for Fira Code ligature support
       - omnifocus
       - postgres
       - slack
