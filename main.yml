@@ -38,13 +38,13 @@
    - name: Check for installed casks/apps
      shell: brew cask list | grep {{ item }}
      register: installed_applications
-     with_items: applications
+     with_items: "{{ applications }}"
      ignore_errors: true
      when: install_cask_apps
 
    - name: Install apps with brew-cask
      shell: brew cask install {{ item }}
-     with_items: applications
+     with_items: "{{ applications }}"
      when: install_cask_apps and item not in installed_applications.results|map(attribute='stdout')
 
    - name: Clone dotfiles
